@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+<meta charset="utf-8">
+<title>Keyboard Settings</title>
+<link rel="stylesheet" type="text/css" href="style/shared/headers.css"/>
+<link rel="stylesheet" type="text/css" href="style/shared/lists.css"/>
+<link rel="stylesheet" type="text/css" href="style/user_dic.css"/>
+<link rel="stylesheet" type="text/css" href="style/shared/confirm.css"/>
+<link rel="stylesheet" type="text/css" href="style/toast.css"/>
+
+<link rel="resource" type="application/l10n" href="locales/locales.ini">
+
+<!-- <script defer type="text/javascript" src="js/common/l10n.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/constants.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/utility.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/data_storage.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/web_socket.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/conv_wrapper.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/dialog.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/settings/user_dic.js"></script> -->
+
+<script defer type="text/javascript" src="js/js_user_dic.js"></script>
+</head>
+<body class="skin-organic">
+<element name="keyboard_dic_detail" extends="section" role="region">
+<section role="region">
+
+<header><a href="settings.html"><span class="icon icon-back"></span></a>
+<h1 data-l10n-id="userDictionary"></h1>
+<div id="dicCount"></div>
+</header>
+<div data-type="action" role="dialog" id='userDicMenu'>
+<menu type="toolbar">
+<div id='userDicList'></div>
+</menu>
+</div>
+
+</section>
+<section role="region" id="user_dic_footer" class="skin-dark">
+<footer id="user_dic_menu_button">
+<a id="add_dic" class="button" data-icon="add"></a>
+<a id="mod_dic" class="button" data-icon="mod"></a>
+<a id="del_dic" class="button" data-icon="del"></a>
+<a id="dic_clear" class="button" data-icon="clear"></a>
+</footer>
+</section>
+</element>
+
+</body>
+</html>

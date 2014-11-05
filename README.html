@@ -1,0 +1,34 @@
+<h2 id="iwnn-ime-for-firefox-">iWnn IME for Firefox 試用版</h2>
+<p>このパッケージには Firefox OS の開発者向けにオムロンソフトウェア社から提供頂いた iWnn IME for Firefox 試用版と Firefox OS の開発端末 Flame にインストールするためのスクリプト一式が含まれています。</p>
+<p>この iWnn IME は開発者向けの試用版であり、ユーザサポートはありません。また、試用期限は 2015 年 9 月 30 日までとなっており、それ以降はご利用頂けません。</p>
+<p>Flame にインストールするには以下の手順に従ってください。</p>
+<h2 id="flame-">Flame のソフトウェアをアップデート</h2>
+<p>まずは Flame の Firefox OS を開発元が提供する最新の <a href="http://cds.w5v8t3u9.hwcdn.net/v188.zip">ベースイメージ (v188版)</a> に入れ替えてください。</p>
+<p>最新ベースイメージへのリンクやアップデート手順の詳細は <a href="https://developer.mozilla.org/ja/Firefox_OS/Developer_phone_guide/Flame">Flame の開発者向け情報ページ</a> をご覧ください:</p>
+<p>Windows では Flame を接続するために USB ドライバのインストールが必要になります。 <a href="http://cds.w5v8t3u9.hwcdn.net/Alcatel_USB_Driver_Q_4.0.0_2013_11_11_noinstall.zip">Windows のドライバ</a> をダウンロード、インストールしてから Flame を PC に接続してください。アップデートには adb や fastboot などのコマンドが必要になります。<a href="https://developer.android.com/sdk/">Android SDK</a> をインストールされるか、このパッケージに同梱されている adb.exe や fastboot.exe をご利用ください。</p>
+<h2 id="usb-">USB 経由のデバッグを有効化</h2>
+<p>最新ベースイメージにアップデートして Flame が再起動したら、English (US) を選択して初期セットアップを完了し、環境設定で USB 経由のデバッグを有効化します。</p>
+<p>「Setting → Device information → More Information」で「Developer Menu」にチェックを入れ、「Settings → Developer → Debugging via USB」で「ADB and DevTools」を選択してください。</p>
+<p>USB ケーブルを接続したら adb devices コマンドで次のように接続した端末の device id が出力されることを確認してください:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;&nbsp;</span><span class="meta paragraph text"><span>List&nbsp;of&nbsp;devices&nbsp;attached&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;f296d820&nbsp;&nbsp;&nbsp;&nbsp;device</span></span></span></div></pre><h2 id="flame-nightly-">Flame を Nightly ビルドに更新</h2>
+<p><a href="https://developer.mozilla.org/ja/Firefox_OS/Developer_phone_guide/Flame">Flame の開発者向け情報ページ</a> に記載の手順に従って、Mozilla が提供する Firefox OS の Nightly ビルドのうち、<a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-b2g32_v2_0-flame-kk/">Production Builds の Release Build</a> に更新してください。</p>
+<p>gaia.zip, b2g-XX.XX.en-US.android-arm.tar.gz をダウンロードしたら、Windows では <a href="https://raw.githubusercontent.com/Mozilla-TWQA/B2G-flash-tool/master/shallow_flash.bat">shallow_flash.bat スクリプト</a> をダブルクリックしてください。Mac や Linux では <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/shallow_flash.sh">shallow_flash.sh スクリプト</a> を使ってビルドの書き換えを行ってください。</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>./shallow_flash.sh&nbsp;-g&nbsp;gaia.zip&nbsp;-G&nbsp;b2g-XX.XX.en-US.android-arm.tar.gz</span></span></span></div></pre><h2 id="usb-">USB 経由のデバッグを有効化</h2>
+<p>Nightly ビルドにアップデートして Flame が再起動したら、日本語を選択して初期セットアップを完了し、環境設定で USB 経由のデバッグを有効化します。</p>
+<p>「環境設定 → 端末情報 → その他の情報」で「開発者メニュー」にチェックを入れ、「環境設定 → 開発者 → USB経由のデバッグ」で「ADBと開発ツール」を選択して有効化したら、先ほどと同様に adb devices で接続できることを確認してください。</p>
+<h2 id="iwnnserver-flame-">iWnnServer を Flame にインストール</h2>
+<p>このパッケージに同梱されているインストールコマンドを実行してください。Windows では install.bat、Mac では install.sh になります。Flame 端末に iWnnServer がインストールされ端末が再起動します。</p>
+<h2 id="firefox-webide-">Firefox で WebIDE をセットアップ</h2>
+<p>Firefox OS のアプリ開発環境 WebIDE をセットアップします。</p>
+<p>Firefox 33 以前では WebIDE は標準では有効化されていないため、アドレスバーに "about:config" と入力してブラウザの設定画面を開き、検索フィールドに "webide" と入力して設定項目を絞り込み、"devtools.webide.enabled" が false となっているのをダブルクリックして true に変更してください。</p>
+<p>Shift+F8 または「Web開発メニュー → WebIDE」で WebIDE を起動したら「ランタイムを選択 → USB デバイス → ADB Helper をインストール」で表示される追加のコンポーネント管理画面で「ADB Helper アドオン」をインストールしてください。Firefox OS の各バージョンのシュミレータもここでインストールできます。</p>
+<h2 id="iwnn-ime-flame-">iWnn IME キーボードを Flame にインストール</h2>
+<p>Firefox の WebIDE で「ランタイムを選択 → USB デバイス → Flame」を選択して端末と接続してください。環境によってはここで "Flame" ではなく "f296d820" のような一件ランダムな ID で認識されることもあります。</p>
+<p>Flame 端末で「リモートデバッグの接続許可を求められています。接続を許可しますか？」のように表示されたら「OK」をタップして接続を許可してください。</p>
+<p>WebIDE で「アプリを開く → パッケージ型アプリを開く」でこのパッケージに含まれる keyboard-iwnn ディレクトリを選択して開いたら、WebIDE 上部のインストールして実行ボタン (右向き三角形のボタン) をクリックしてください。</p>
+<p>Flame 端末で「iWnn IME のインストールが完了しました」と表示されるので「セットアップ」をタップして、キーボードの追加確認画面で「日本語」にチェックを入れて「確認」をタップしてください。ここでキーボードを追加しなかった場合もあとで「環境設定 → キーボード → 使用中のキーボード → 他のキーボードを追加 → iWnn IME → 日本語」のチェックを入れることで追加できます。</p>
+<h2 id="-iwnn-ime-">キーボードを iWnn IME に切り替えて日本語入力をする</h2>
+<p>アプリケーションで文字入力をする際にキーボードが表示されますが、Firefox OS 標準の英語キーボードが表示されている場合、キーボード最下段の「En...」と書かれたボタンをタップすることで iWnn IEM に切り替えられます。</p>
+<p>iWnn IME では日本語だけでなく英語や数字入力用のキーボードもテンキーとフルキー両方が搭載されているため、標準の英語や数字のキーボードは不要になります。iWnn IME だけを利用したい場合は「環境設定 → キーボード → 使用中のキーボード」で標準のキーボードの「Number」や「English」のチェックを外し、iWnn IME の「日本語」だけにチェックを入れてください。</p>
+<p>iWnn IME の設定変更やユーザ辞書の管理は「環境設定 → キーボード → iWnn IME」でできます。</p>
+<p><img src="/Users/dynamis/build/b2g-iWnn/sample/screenshots/input-japanese.png" alt="日本語入力画面"> <img src="/Users/dynamis/build/b2g-iWnn/sample/screenshots/input-katakana.png" alt="カタカナ入力画面"> <img src="/Users/dynamis/build/b2g-iWnn/sample/screenshots/input-url.png" alt="URL 入力画面"></p>

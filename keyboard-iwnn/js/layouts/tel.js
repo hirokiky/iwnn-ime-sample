@@ -1,0 +1,2 @@
+Keyboards.tel={width:3,keyClassName:"big-key special-key number",types:[INPUT_TYPE.TEL],keys:[[{value:"1",fontSize:"big"},{value:"2",fontSize:"big"},{value:"3",fontSize:"big"}],[{value:"4",fontSize:"big"},{value:"5",fontSize:"big"},{value:"6",fontSize:"big"}],[{value:"7",fontSize:"big",altNote:"#"},{value:"8",fontSize:"big",altNote:"-"},{value:"9",fontSize:"big",altNote:"*"}],[{value:"(",fontSize:"big",altNote:")"},{value:"0",fontSize:"big",altNote:"+"},{value:"\u232b",keyCode:KeyEvent.DOM_VK_BACK_SPACE}]],
+alt:{7:"#",8:"-",9:"*","(":")",0:"+"}};

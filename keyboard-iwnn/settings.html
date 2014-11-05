@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+<meta charset="utf-8">
+<title>Keyboard Settings</title>
+<link rel="stylesheet" type="text/css" href="style/shared/headers.css"/>
+<link rel="stylesheet" type="text/css" href="style/shared/buttons.css"/>
+<link rel="stylesheet" type="text/css" href="style/shared/switches.css"/>
+<link rel="stylesheet" type="text/css" href="style/shared/lists.css"/>
+<link rel="stylesheet" type="text/css" href="style/settings.css"/>
+<link rel="stylesheet" type="text/css" href="style/shared/confirm.css"/>
+<link rel="stylesheet" type="text/css" href="style/toast.css"/>
+
+<link rel="resource" type="application/l10n" href="locales/locales.ini">
+
+<!-- <script defer type="text/javascript" src="js/common/l10n.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/constants.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/utility.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/data_storage.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/setting_manager.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/web_socket.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/conv_wrapper.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/dialog.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/settings/settings.js"></script> -->
+
+<script defer type="text/javascript" src="js/js_settings.js"></script>
+</head>
+<body class="skin-organic">
+<element name="keyboard_settings" extends="section">
+
+<section role="region">
+<header>
+<a id="back" href="#"><span class="icon icon-back"></span></a>
+<h1 data-l10n-id="keyboardSettings"></h1>
+</header>
+<div id="general-settings">
+<header><h2 data-l10n-id="keyControl"></h2></header>
+<ul>
+<li data-setting="keyboard.clicksound">
+<label class="pack-checkbox">
+<input type="checkbox" id="cb-clickSound">
+<span data-l10n-id="clickSound" for="cb-clickSound"></span>
+</label>
+</li>
+
+<li data-setting="keyboard.vibration">
+<label class="pack-checkbox">
+<input type="checkbox" id="cb-vibration">
+<span data-l10n-id="vibration" for="cb-vibration"></span>
+</label>
+</li>
+
+<li data-setting="keyboard.inputkeypopup">
+<label class="pack-checkbox">
+<input type="checkbox" checked id="cb-inputKeypopup">
+<span data-l10n-id="inputKeypopup" for="cb-inputKeypopup"></span>
+</label>
+</li>
+
+<li>
+<small data-l10n-id="keyboardTypeExplain" class="summary"></small>
+<p id="keyboardType" class="title"><label data-l10n-id="keyboardType"></label></p>
+</li>
+</ul>
+
+<header><h2 data-l10n-id="inputFor10Key"></h2></header>
+<ul>
+<li data-setting="keyboard.inputflick" id='inputFlick'>
+<label class="pack-checkbox">
+<input type="checkbox" checked id="cb-inputFlick">
+<span data-l10n-id="inputFlick" for="cb-inputFlick"></span>
+</label>
+</li>
+
+<li data-setting="keyboard.sensitivityflick" id='sensitivityFlick'>
+<p class="title"><label data-l10n-id="sensitivityFlick"></label></p>
+<label class="pack-range" class="nonepointer">
+<label data-l10n-id="rangeRow" class="nonepointer"></label>
+<input type="range" id="cb-sensitivityFlick">
+<label data-l10n-id="rangeHigh" class="nonepointer"></label>
+<span></span>
+</label>
+</li>
+
+<li data-setting="keyboard.inputtoggle" id='inputToggle'>
+<label class="pack-checkbox">
+<input type="checkbox" checked id="cb-inputToggle">
+<span data-l10n-id="inputToggle" for="cb-inputToggle"></span>
+</label>
+</li>
+
+<li data-setting="keyboard.cursorautomove" class="vertical-high">
+<p class="title" id='cursorAutoMove'>
+<label data-l10n-id="cursorAutoMove" for="sel-cursorAutoMove" class="nonepointer"></label>
+<label data-l10n-id="cursorAutoMoveExplain" class="summary"></label>
+</p>
+<span class="button icon icon-dialog">
+<label class="pack-select" for="cursorAutoMove">
+<select id="sel-cursorAutoMove">
+<option data-l10n-id="cursorMoveEarly" value="700"></option>
+<option data-l10n-id="cursorMoveUsually" value="1200" selected></option>
+<option data-l10n-id="cursorMoveSlowly" value="1700"></option>
+<option data-l10n-id="cursorMoveOff" value="0"></option>
+</select>
+</label>
+</span>
+</li>
+</ul>
+
+<header><h2 data-l10n-id="predictiveTransform"></h2></header>
+<ul>
+<li data-setting="keyboard.convertlearn">
+<label class="pack-checkbox">
+<input type="checkbox" checked id="cb-convertLearn">
+<span data-l10n-id="convertLearn" for="cb-convertLearn"></span>
+</label>
+</li>
+
+<li data-setting="keyboard.convertanalyze">
+<label class="pack-checkbox">
+<input type="checkbox" checked id="cb-convertAnalyze">
+<span data-l10n-id="convertAnalyze" for="cb-convertAnalyze"></span>
+</label>
+</li>
+
+<li>
+<span data-l10n-id="userDictionary" id="user_dic"></span>
+</li>
+
+</ul>
+
+<header><h2 data-l10n-id="reset"></h2></header>
+<ul>
+<li>
+<span data-l10n-id="deleteLearnDictionary" id="learn_dic_del"></span>
+</li>
+
+<li>
+<span data-l10n-id="resetSettings" id="reset_settings"></span>
+</li>
+
+</ul>
+
+<header><h2 data-l10n-id="aboutIME"></h2></header>
+<ul>
+<li class="vertical">
+<p class="title">
+<label data-l10n-id="applicationName" class="nonepointer"></label></p>
+<p class="summary">
+<label>
+<label data-l10n-id="applicationVersion"></label>
+<label data-l10n-id="trial_version"></label>
+</label>
+<label data-l10n-id="applicationCopyright"></label>
+</p>
+</li>
+</ul>
+</div>
+
+</section>
+</element>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+<meta charset="utf-8">
+<title>Keyboard Service</title>
+<!-- Shared code -->
+<link rel="stylesheet" type="text/css" href="style/keyboard.css" />
+<link rel="stylesheet" type="text/css" href="style/toast.css"/>
+
+<link rel="resource" type="application/l10n" href="locales/locales.ini">
+
+<!-- <script defer type="text/javascript" src="js/common/l10n.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/constants.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/utility.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/data_storage.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/web_socket.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/conv_wrapper.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/setting_manager.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/status_manager.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/composing_text.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/symbols_utility.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/layouts/layout.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/render.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/keyboard_event_handler.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/keyboard.js"></script> -->
+<script defer type="text/javascript" src="js/js_index.js"></script>
+</head>
+<body>
+<div id="keyboard" data-hidden="true">
+<span id="keyboard-accent-char-menu-out">
+<span id="keyboard-accent-char-menu"></span>
+</span>
+<span id="keyboard-key-highlight"></span>
+</div>
+<!-- This is to pre-load styles for keys avoiding flickering -->
+<div class="cache">
+<button class="keyboard-key"><span class="visual-wrapper"><span>C</span></span></button>
+<button class="keyboard-key highlighted"><span class="visual-wrapper"><span>C</span></span></button>
+<button class="keyboard-key special-key"><span class="visual-wrapper"><span>C</span></span></button>
+<button class="keyboard-key special-key kbr-key-hold"><span class="visual-wrapper"><span>C</span></span></button>
+</div>
+
+</body>
+</script>
+</html>

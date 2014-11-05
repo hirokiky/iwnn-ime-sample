@@ -1,0 +1,48 @@
+{
+  "inputs": {
+    "jp-kanji": {
+      "launch_path": "/index.html#jp-kanji",
+      "name": "日本語",
+      "types": [
+        "text"
+       ,"url"
+       ,"email"
+       ,"tel"
+       ,"number"
+      ],
+      "description": "Kanji layout"
+    }
+  },
+  "name": "iWnn IME",
+  "default_locale": "en-US",
+  "icons": {
+    "60": "/style/icons/iwnnime_icon_60.png",
+    "128": "/style/icons/iwnnime_icon_128.png"
+  },
+  "description": "iWnn IME",
+  "role": "input",
+  "launch_path": "/settings.html",
+  "permissions": {
+    "input": {
+      "description": "To send key events"
+    },
+    "settings": {
+      "access": "readwrite"
+    },
+    "systemXHR": {
+      "description": "XmlHttpRequest"
+    }
+  },
+  "type": "certified",
+  "locales": {
+    "en-US": {
+      "name": "iWnn IME",
+      "description": "iWnn IME"
+    }
+  },
+  "developer": {
+    "url": "https://www.omronsoft.co.jp/",
+    "name": "OMRON SOFTWARE Co., Ltd."
+  },
+  "orientation": "default"
+}

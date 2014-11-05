@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+<meta charset="utf-8">
+<title>Keyboard Settings</title>
+<link rel="stylesheet" type="text/css" href="style/user_dic.css"/>
+<link rel="stylesheet" type="text/css" href="style/shared/confirm.css"/>
+<link rel="stylesheet" type="text/css" href="style/toast.css"/>
+
+<link rel="resource" type="application/l10n" href="locales/locales.ini">
+
+<!-- <script defer type="text/javascript" src="js/common/l10n.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/constants.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/utility.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/data_storage.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/web_socket.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/conv_wrapper.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/settings/user_dic_edit.js"></script> -->
+
+<script defer type="text/javascript" src="js/js_user_dic_edit.js"></script>
+</head>
+<body class="skin-organic">
+<element name="keyboard_dic_detail" extends="section" role="region">
+<section role="region">
+
+<div id="confirmation-message" role="dialog" data-type="confirm" >
+<section>
+<div><label data-l10n-id="user_dic_word"></label>:<br />
+<input type="text" x-inputmode="iwnn-user-dictionary" id="user_dic_word"></input>
+</div>
+<div><label data-l10n-id="user_dic_read"></label>:<br />
+<input type="text" x-inputmode="phonetic iwnn-user-dictionary" id="user_dic_read"></input>
+</div>
+<div id="err_msg"></div>
+</section>
+<menu>
+<button id="confirm-cancel" data-l10n-id="cancel"></button>
+<button id="confirm-agree" data-l10n-id="ok"></button>
+</menu>
+</div>
+
+</section>
+</element>
+
+</body>
+</html>

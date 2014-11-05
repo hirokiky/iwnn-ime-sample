@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+<meta charset="utf-8">
+<title>Keyboard Settings</title>
+<link rel="stylesheet" type="text/css" href="style/shared/headers.css"/>
+<link rel="stylesheet" type="text/css" href="style/shared/switches.css"/>
+<link rel="stylesheet" type="text/css" href="style/shared/lists.css"/>
+<link rel="stylesheet" type="text/css" href="style/settings.css"/>
+<link rel="stylesheet" type="text/css" href="style/shared/confirm.css"/>
+
+<link rel="resource" type="application/l10n" href="locales/locales.ini">
+
+<!-- <script defer type="text/javascript" src="js/common/l10n.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/constants.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/utility.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/data_storage.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/common/setting_manager.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/conv_wrapper.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/web_socket.js"></script> -->
+<!-- <script defer type="text/javascript" src="js/settings/settings.js"></script> -->
+<script defer type="text/javascript" src="js/js_settings_keyboard_type.js"></script>
+</head>
+<body class="skin-organic">
+<element name="keyboard_settings" extends="section" role="region">
+
+<section role="region">
+<header>
+<a href="settings.html"><span class="icon icon-back"></span></a>
+<h1 data-l10n-id="keyboardTypeSettings"></h1>
+</header>
+<div id="general-settings">
+<header><h2 data-l10n-id="portraitScreen"></h2></header>
+<ul>
+<li data-setting="keyboard.layoutjpkanji.portrait" class="vertical">
+<p><label data-l10n-id="keyboardTypeJp" for="cb-layoutJpPortrait" class="nonepointer"></label></p>
+<aside class="pack-end">
+<label class="pack-radio original">
+<input type="radio" id="cb-layoutJpPortrait" name="cb-layoutJpPortrait" value="0" class="originalRadio">
+<label><span data-l10n-id="keyboardTypeNumeric"></span></label>
+<span></span>
+</label>
+<label class="pack-radio original">
+<input type="radio" id="cb-layoutJpPortrait" name="cb-layoutJpPortrait" value="1" class="originalRadio">
+<label><span data-l10n-id="keyboardTypeFull"></span></label>
+<span></span>
+</label>
+</aside>
+</li>
+
+<li data-setting="keyboard.layoutjpkanjien.portrait" class="vertical">
+<p><label data-l10n-id="keyboardTypeEn" for="cb-layoutEnPortrait" class="nonepointer"></label></p>
+<aside class="pack-end">
+<label class="pack-radio original">
+<input type="radio" id="cb-layoutEnPortrait" name="cb-layoutEnPortrait" value="0" class="originalRadio">
+<label><span data-l10n-id="keyboardTypeNumeric"></span></label>
+<span></span>
+</label>
+<label class="pack-radio original">
+<input type="radio" id="cb-layoutEnPortrait" name="cb-layoutEnPortrait" value="1" class="originalRadio">
+<label><span data-l10n-id="keyboardTypeFull"></span></label>
+<span></span>
+</label>
+</aside>
+</li>
+
+<li data-setting="keyboard.layoutjpkanjinum.portrait" class="vertical">
+<p><label data-l10n-id="keyboardTypeNum" for="cb-layoutNumPortrait" class="nonepointer"></label></p>
+<aside class="pack-end">
+<label class="pack-radio original">
+<input type="radio" id="cb-layoutNumPortrait" name="cb-layoutNumPortrait" value="0" class="originalRadio">
+<label><span data-l10n-id="keyboardTypeNumeric"></span></label>
+<span></span>
+</label>
+<label class="pack-radio original">
+<input type="radio" id="cb-layoutNumPortrait" name="cb-layoutNumPortrait" value="1" class="originalRadio">
+<label><span data-l10n-id="keyboardTypeFull"></span></label>
+<span></span>
+</label>
+</aside>
+</li>
+</ul>
+
+<header><h2 data-l10n-id="landscapeScreen"></h2></header>
+<ul>
+<li data-setting="keyboard.layoutjpkanji.landscape" class="vertical">
+<p><label data-l10n-id="keyboardTypeJp" for="cb-layoutJpLandscape" class="nonepointer"></label></p>
+<aside class="pack-end">
+<label class="pack-radio original">
+<input type="radio" id="cb-layoutJpLandscape" name="cb-layoutJpLandscape" value="0" class="originalRadio">
+<label><span data-l10n-id="keyboardTypeNumeric"></span></label>
+<span></span>
+</label>
+<label class="pack-radio original">
+<input type="radio" id="cb-layoutJpLandscape" name="cb-layoutJpLandscape" value="1" class="originalRadio">
+<label><span data-l10n-id="keyboardTypeFull"></span></label>
+<span></span>
+</label>
+</aside>
+</li>
+
+<li data-setting="keyboard.layoutjpkanjien.landscape" class="vertical">
+<p><label data-l10n-id="keyboardTypeEn" for="cb-layoutEnLandscape" class="nonepointer"></label></p>
+<aside class="pack-end">
+<label class="pack-radio original">
+<input type="radio" id="cb-layoutEnLandscape" name="cb-layoutEnLandscape" value="0" class="originalRadio">
+<label><span data-l10n-id="keyboardTypeNumeric"></span></label>
+<span></span>
+</label>
+<label class="pack-radio original">
+<input type="radio" id="cb-layoutEnLandscape" name="cb-layoutEnLandscape" value="1" class="originalRadio">
+<label><span data-l10n-id="keyboardTypeFull"></span></label>
+<span></span>
+</label>
+</aside>
+</li>
+
+<li data-setting="keyboard.layoutjpkanjinum.landscape" class="vertical">
+<p><label data-l10n-id="keyboardTypeNum" for="cb-layoutNumLandscape" class="nonepointer"></label></p>
+<aside class="pack-end">
+<label class="pack-radio original">
+<input type="radio" id="cb-layoutNumLandscape" name="cb-layoutNumLandscape" value="0" class="originalRadio">
+<label><span data-l10n-id="keyboardTypeNumeric"></span></label>
+<span></span>
+</label>
+<label class="pack-radio original">
+<input type="radio" id="cb-layoutNumLandscape" name="cb-layoutNumLandscape" value="1" class="originalRadio">
+<label><span data-l10n-id="keyboardTypeFull"></span></label>
+<span></span>
+</label>
+</aside>
+</li>
+</ul>
+
+</div>
+
+</section>
+</element>
+
+</body>
+</html>
