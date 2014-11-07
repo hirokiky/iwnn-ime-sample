@@ -1,6 +1,6 @@
-## iWnn IME for Firefox 試用版
+## iWnn IME for Firefox OS 試用版
 
-このパッケージには Firefox OS の開発者向けにオムロンソフトウェア社から提供頂いた iWnn IME for Firefox 試用版と Firefox OS の開発端末 Flame にインストールするためのスクリプト一式が含まれています。
+このパッケージには Firefox OS の開発者向けにオムロンソフトウェア社から提供頂いた iWnn IME for Firefox OS 試用版と Firefox OS の開発端末 Flame にインストールするためのスクリプト一式が含まれています。
 
 この iWnn IME は開発者向けの試用版であり、ユーザサポートはありません。また、試用期限は 2015 年 9 月 30 日までとなっており、それ以降はご利用頂けません。
 
