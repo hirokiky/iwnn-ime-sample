@@ -93,7 +93,7 @@ if [ -n "`grep \"iWnn\" temp/b2g.sh`" ]; then
   echo "already have iWnn entry in b2g.sh"
 else
   # for Gnu-sed (Linux):
-  #sed -i '2s|^|/system/bin/iWnnServer /data/iwnn \&\n|' "$B2GDIR/gonk-misc/b2g.sh"
+  #sed -i '2s|^|/system/bin/iWnnServer /data/iwnn \&\n|' "temp/b2g.sh"
   # for FreeBSD-sed (Mac OS X):
   sed -i '' '2s|^|/system/bin/iWnnServer /data/iwnn \&\
 |' "temp/b2g.sh"
