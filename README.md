@@ -6,17 +6,23 @@
 
 Flame にインストールするには以下の手順に従ってください。
 
-## Flame のソフトウェアをアップデート
-
-まずは Flame の Firefox OS を開発元が提供する最新の [ベースイメージ (v188版)](http://cds.w5v8t3u9.hwcdn.net/v188.zip) に入れ替えてください。
-
-最新ベースイメージへのリンクやアップデート手順の詳細は [Flame の開発者向け情報ページ](https://developer.mozilla.org/ja/Firefox_OS/Developer_phone_guide/Flame) をご覧ください:
+## USB ドライバのインストール (Windows のみ)
 
 Windows では Flame を接続するために USB ドライバのインストールが必要になります。 [Windows のドライバ](http://cds.w5v8t3u9.hwcdn.net/Alcatel_USB_Driver_Q_4.0.0_2013_11_11_noinstall.zip) をダウンロード、インストールしてから Flame を PC に接続してください。アップデートには adb や fastboot などのコマンドが必要になります。[Android SDK](https://developer.android.com/sdk/) をインストールされるか、このパッケージに同梱されている adb.exe や fastboot.exe をご利用ください。
 
+## Flame のソフトウェアをアップデート
+
+まずは Flame の製造元が提供する最新安定版である Firefox OS 2.0 のベースイメージにソフトウェアアップデートを行ってください。
+
+Flame のインターネット接続を有効にして「Setting → Device information → System Updates」で「Check for updates」をタップすると「A new firmware is available now.」というメッセージや「Update information」が表示されるので「Download」ボタンをタップしてシステムアップデートをダウンロード、「Install」ボタンをタップすると端末が再起動されることやインストール前にバックアップを推奨するメッセージが表示されます。「Continue」をタップすると端末が再起動、新しい Firefox OS に書き換えられて再起動します。
+
+Firefox OS 2.0 ではデフォルトのホーム画面が縦スクロールになるなど操作性が大きく代わるため初回起動時には「Start your phone tour!」と書かれた操作説明ツアー画面が表示されます。ツアーを終了して「Setting → Device information → More Information」で OS version が 2.0.0.0-prerelease、Build Identifier が 20141016183911 となっていることを確認してください。
+
+ここで説明したソフトウェアアップデートはネットワーク経由 (OTA) ではなく手動で行うこともできます。既に初期出荷時のビルド以外に書き換えているなどの理由があり手動で行いたい場合、Flame 開発元が提供する [Firefox OS 2.0 のベースイメージ (v188版)](http://cds.w5v8t3u9.hwcdn.net/v188.zip) に入れ替えてください。最新ベースイメージへのリンクやアップデート手順の詳細は [Flame の開発者向け情報ページ](https://developer.mozilla.org/ja/Firefox_OS/Developer_phone_guide/Flame) をご覧ください。
+
 ## USB 経由のデバッグを有効化
 
-最新ベースイメージにアップデートして Flame が再起動したら、English (US) を選択して初期セットアップを完了し、環境設定で USB 経由のデバッグを有効化します。
+環境設定で USB 経由のデバッグを有効化してください。
 
 「Setting → Device information → More Information」で「Developer Menu」にチェックを入れ、「Settings → Developer → Debugging via USB」で「ADB and DevTools」を選択してください。
 
@@ -36,6 +42,8 @@ gaia.zip, b2g-XX.XX.en-US.android-arm.tar.gz をダウンロードしたら、Wi
 ```
 ./shallow_flash.sh -g gaia.zip -G b2g-XX.XX.en-US.android-arm.tar.gz
 ```
+
+note: Firefox OS の UI は英語のままで使用する場合この手順は不要です。
 
 ## USB 経由のデバッグを有効化
 
