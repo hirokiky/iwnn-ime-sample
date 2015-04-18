@@ -92,11 +92,14 @@ run_adb pull /system/bin/b2g.sh temp/b2g.sh
 if [ -n "`grep \"iWnn\" temp/b2g.sh`" ]; then
   echo "already have iWnn entry in b2g.sh"
 else
-  # for Gnu-sed (Linux):
-  #sed -i '2s|^|/system/bin/iWnnServer /data/iwnn \&\n|' "temp/b2g.sh"
-  # for FreeBSD-sed (Mac OS X):
-  sed -i '' '2s|^|/system/bin/iWnnServer /data/iwnn \&\
-|' "temp/b2g.sh"
+  if [ "$(uname)" == "Darwin" ]; then
+      # for FreeBSD-sed (Mac OS X):
+      sed -i '' '2s|^|/system/bin/iWnnServer /data/iwnn \&\
+    |' "temp/b2g.sh"
+  else
+      # for Gnu-sed (Linux):
+      sed -i '2s|^|/system/bin/iWnnServer /data/iwnn \&\n|' "temp/b2g.sh"
+  fi
   run_adb push temp/b2g.sh /system/bin/b2g.sh
   run_adb shell chmod 755 /system/bin/b2g.sh
 fi
